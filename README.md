@@ -69,7 +69,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 
-📊 Output
+## Output
 The system generates a DDR with 7 standardized sections:
 
 Property Issue Summary — Executive overview
@@ -88,7 +88,9 @@ Missing or Unclear Information — Explicitly flagged gaps
 
 Output formats: HTML (with embedded base64 images) and PDF.
 
-🛠️ Tech Stack
+
+## Tech Stack
+
 Component	Technology
 Language	Python 3.11
 PDF Processing	PyMuPDF, pdfplumber
@@ -97,7 +99,10 @@ Vision Model	OpenAI CLIP (ViT-B/32)
 Image Handling	Pillow
 Report Generation	Jinja2, Markdown, WeasyPrint
 Configuration	python-dotenv
-🔑 Key Design Decisions
+
+
+## Key Design Decisions
+
 Prompt Chaining — Multiple focused prompts instead of one monolithic prompt for better reliability
 
 Explicit Null Handling — Every missing field defaults to "Not Available", never empty string or guess
@@ -108,7 +113,10 @@ Smart Image Filtering — Hash-based deduplication, aspect ratio checks, minimum
 
 Prompt-Driven Architecture — Same code works for electrical, plumbing, or structural inspections
 
-⚠️ Limitations
+
+
+##Limitations
+
 Thermal image matching is probabilistic without labeled training data
 
 Groq free tier rate limits (30 requests/minute)
@@ -117,7 +125,8 @@ No human-in-the-loop review interface yet
 
 English language only
 
-🔮 Future Improvements
+## Future Improvements
+
 Streamlit web interface for drag-and-drop usage
 
 Fine-tuned smaller model (Llama 3 8B) on inspection terminology
