@@ -67,6 +67,7 @@ source venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
+```
 
 
 ## Output
@@ -115,7 +116,7 @@ Prompt-Driven Architecture — Same code works for electrical, plumbing, or stru
 
 
 
-##Limitations
+## Limitations
 
 Thermal image matching is probabilistic without labeled training data
 
